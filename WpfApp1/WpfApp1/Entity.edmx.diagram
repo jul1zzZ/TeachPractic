@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="952aff0e1e3c4c69a513b3d341a66444" Name="Diagram1">
+        <EntityTypeShape EntityType="GBModel.Category" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Client" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.ClientType" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Complect" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Developer" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Good" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Season" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.SeasonGood" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Sell" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.SellVisit" Width="1.5" PointX="7.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Service" Width="1.5" PointX="0.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.ServiceShare" Width="1.5" PointX="6" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Share" Width="1.5" PointX="3.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Speciality" Width="1.5" PointX="1.5" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Store" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.TimeSheet" Width="1.5" PointX="3" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.User" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Visit" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBModel.Worker" Width="1.5" PointX="0.75" PointY="22.625" IsExpanded="true" />
+        <AssociationConnector Association="GBModel.FK_Good_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Client_ClientType" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Visit_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Complect_Good" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Complect_Good1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Good_Developer" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_SeasonGood_Good" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Sell_Good" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Store_Good" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_SeasonGood_Season" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_SellVisit_Sell" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_SellVisit_Visit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_ServiceShare_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_TimeSheet_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_ServiceShare_Share" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Worker_Speciality" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_TimeSheet_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="GBModel.FK_Visit_TimeSheet" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
