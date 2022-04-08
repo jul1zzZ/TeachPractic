@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7035bccd0ed64bf9aaaa28d324429197" Name="Diagram1">
+        <EntityTypeShape EntityType="JumperModel.Agent" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.AgentType" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Material" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.MaterialType" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Order" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.ProductMaterial" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.ProductType" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="JumperModel.FK_Agent_AgentType" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK_Order_Agent" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK_Material_MaterialType" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK_ProductMaterial_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK_Order_Product" ManuallyRouted="true" >
+          <ConnectorPoint PointX="4.5" PointY="4.7785953776041667" />
+          <ConnectorPoint PointX="4.875" PointY="4.7785953776041667" />
+          <ConnectorPoint PointX="4.875" PointY="4.7785953776041659" />
+          <ConnectorPoint PointX="5.25" PointY="4.7785953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="JumperModel.FK_Product_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK_ProductMaterial_Product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
