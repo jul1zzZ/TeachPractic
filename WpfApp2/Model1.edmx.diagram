@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2acda7edc6294bb188120f2f8466d66b" Name="Diagram1">
+        <EntityTypeShape EntityType="PolyclinicModel.Cabinet" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Doctor" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Patient" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Purchase" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Report" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Sale" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Specialization" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.TimeTable" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Visit" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Warehouse" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolyclinicModel.Auth" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="PolyclinicModel.FK_Doctor_Cabinet" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Doctor_Specialization" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Doctor_TimeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Visit_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Visit_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Purchase_Warehouse" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Report_Purchase" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Sale_Purchase" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Report_Sale" ManuallyRouted="false" />
+        <AssociationConnector Association="PolyclinicModel.FK_Report_Visit" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
