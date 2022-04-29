@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\witless\Desktop\WpfApp2\obj\Debug\
+C:\Users\witless\Desktop\TeachPractic\WpfApp2\obj\Debug\
 WpfApp2
 none
 false
 DEBUG;TRACE
-C:\Users\witless\Desktop\WpfApp2\App.xaml
+C:\Users\witless\Desktop\TeachPractic\WpfApp2\App.xaml
 51342691939
 21750853300
-26-591468349
-19-1849110447
+25250891018
+19-2034372790
 CatalogPage.xaml;LoginWindow.xaml;MainWindow.xaml;PatientInfoPage.xaml;TablePage.xaml;
 
-True
+False
 

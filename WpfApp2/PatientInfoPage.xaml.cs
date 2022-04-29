@@ -25,14 +25,27 @@ namespace WpfApp2
     public partial class PatientInfoPage : Page
     {
         public string _photoDirectory = $@"{Directory.GetCurrentDirectory()}\Images\";
-
         private string _photoPath;
         private string _photoName;
         public Patient Patient { get; set; }
-        public PatientInfoPage(Patient patient)
+        public PatientInfoPage(Patient patient1)
         {
             InitializeComponent();
-            Patient = patient ?? new Patient();
+            Patient = new Patient();
+
+            if (patient1 != null)
+            {
+                Patient = patient1;
+                TextBoxGoodId.Visibility = Visibility.Hidden;
+                TextBlockGoodID.Visibility = Visibility.Hidden;
+                int x = patient1.PatientID;
+                List<Patient> additional = PolyclinicEntities.GetContext().Patients.Where(p =>
+                p.PatientID == patient1.PatientID).ToList();
+                List<Patient> patients = new List<Patient>();
+                _photoPath = _photoDirectory + Patient.Photo;
+            }
+            DataContext = Patient;
+            _photoName = Patient.Photo;
         }
 
         private void LoadPhotoBtn_Click(object sender, RoutedEventArgs e)
@@ -55,12 +68,15 @@ namespace WpfApp2
 
             _photoName = Guid.NewGuid().ToString();
             _photoPath = fileInfo.FullName;
+            Image1.Source = new BitmapImage(new Uri(_photoPath));
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(Patient.Name);
             try
             {
+              
                 if (_photoPath != null)
                 {
                     Patient.Photo = _photoName;
@@ -77,6 +93,12 @@ namespace WpfApp2
             {
                 MessageBox.Show(ex.InnerException.Message);
             }
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            List<Patient> additional = PolyclinicEntities.GetContext().Patients.Where(p => p.PatientID == Patient.PatientID).ToList();
+            List<Patient> goods = new List<Patient>();
         }
     }
 }

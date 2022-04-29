@@ -6,20 +6,19 @@
       xmlns:local="clr-namespace:WpfApp2"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TablePage">
-
+      Title="TablePage" IsVisibleChanged="Page_IsVisibleChanged">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <DataGrid ItemsSource="{Binding Agents}" AutoGenerateColumns="False">
+        <DataGrid x:Name="DataGridGood" ItemsSource="{Binding Agents}" AutoGenerateColumns="False" LoadingRow="DataGridGood_LoadingRow" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Фамилия" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Name}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Name}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -33,21 +32,21 @@
                 <DataGridTemplateColumn Header="Имя" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Surname}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Surname}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="Номер телефона" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=PhoneNumber}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding PhoneNumber}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="Отчество" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Patronymic}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Patronymic}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -58,10 +57,14 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
-
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddAgent" Content="Добавить агента" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20 10" FontSize="24" Click="AddAgent_Click"/>
+        
+        <Button x:Name="BtnDelete" Grid.Row="1" Width="100" 
+                HorizontalAlignment="Right" Margin="3" 
+                Content="Удалить" Click="BtnDelete_Click"/>
+        <Button x:Name="BtnAdd" Grid.Row="1" Width="100" 
+                HorizontalAlignment="Left" Margin="3" 
+                Content="Добавить" Click="BtnAdd_Click"/>
     </Grid>
 </Page>
